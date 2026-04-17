@@ -4,37 +4,33 @@ from ultralytics import YOLO
 from collections import defaultdict, deque
 import math
 
-# ===============================
 # CONFIG
 # ===============================
 
 MODEL_PATH = "models/best.pt"
-VIDEO_PATH = "videos/drowning1.mp4"
+VIDEO_PATH = "videos/test.mp4"
 
 WINDOW_SIZE = 30        # frames
 
 HIGH_RISK_FRAMES = 15   # threshold
 
-# ===============================
 # LOAD MODEL
 # ===============================
 
 model = YOLO(MODEL_PATH)
 
-# ===============================
+
 # MEMORY FOR TRACKING
 # ===============================
 
 memory = defaultdict(lambda: deque(maxlen=WINDOW_SIZE))
 
-# ===============================
 # DISTANCE FUNCTION
 # ===============================
 
 def distance(p1, p2):
     return math.sqrt((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)
 
-# ===============================
 # RISK ANALYSIS
 # ===============================
 
@@ -56,7 +52,6 @@ def analyze_behavior(track):
 
     return "NORMAL_ACTIVITY"
 
-# ===============================
 # VIDEO PIPELINE
 # ===============================
 
