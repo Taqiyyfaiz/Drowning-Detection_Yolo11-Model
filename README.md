@@ -196,6 +196,7 @@ This is a research project built for academic purposes. It has not been tested i
 
 ## Author
 
-Mohamed Taqiyy Faiz
-B.Tech — Computer Science & Engineering (Data Science & AI)
-Dr. MGR Educational and Research Institute, Chennai — 2026
+Taqiyy Faiz
+B.Tech — Data Science & AI
+Dr. MGR Educational and Research Institute, 
+Chennai — 2026
