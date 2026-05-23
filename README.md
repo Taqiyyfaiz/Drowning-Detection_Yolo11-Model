@@ -45,9 +45,18 @@ drowning_dataset/
 
 ---
 ## Results & Model Performance
+| Metric | Value |
+|--------|-------|
+| Normal (swimming) Detection | 98% recall |
+| Drowning Detection | 88.9% recall (48/54 instances) |
+| False Alarm Rate | ~1% (1 false positive on normal class) |
+| Missed Drowning Alerts | 4 out of 54 (called as "normal") |
+| Training Epochs | 80 |
+| Device | CPU |
+
 ### Confusion Matrix
 <img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/7533d494-b8f4-4ac1-8f27-b5de4b28cecd" />
-The model detects the swimming class with high confidence (0.91). Detection sensitivity on the drowning class is 70–80%, with the primary failure mode being false negatives — the known limitation of a CPU-trained model on a small dataset. Real-time deployment testing and dataset expansion are the next steps.
+The model reliably identifies normal swimming (98% accuracy) and catches 48 out of 54 drowning instances. The primary failure mode is 4 cases where drowning was misclassified as normal — the critical false negative for a safety system. The background class shows low precision due to limited background samples in the training dataset. Dataset expansion and GPU-accelerated retraining are the next steps to push drowning recall above 95%.
 
 ### Results
 <img width="2400" height="1200" alt="results" src="https://github.com/user-attachments/assets/b132a20c-9c56-40ce-8d17-4a90d488a130" />
