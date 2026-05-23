@@ -44,7 +44,7 @@ drowning_dataset/
 ```
 
 ---
-## Traning and metrics curves Screenshot
+## Results & Model Performance
 ### Confusion Matrix
 <img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/7533d494-b8f4-4ac1-8f27-b5de4b28cecd" />
 ### Results
